@@ -18,6 +18,6 @@ router.get('/welcome', function(req, res, next) {
 });
 
 router.get('/wel', function(req, res, next) {
-    res.send('deepi');
+    res.send('deepi welcome to heroku');
 });
 module.exports = router;
