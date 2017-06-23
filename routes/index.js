@@ -5,7 +5,7 @@ var URL="mongodb://dpi:123456@ds131782.mlab.com:31782/dp"
 
 const db=require('monk')(URL)
 
-const docs=db.get('d')
+const docs=db.get('dpu')
 /* GET home page. */
 router.get('/push', function(req, res, next) {
   //res.render('index', { title: 'Express' });
@@ -18,7 +18,8 @@ router.get('/push', function(req, res, next) {
 });
 
 router.get('/welo', function(req, res, next) {
-    docs.find({},function(err,docs) {
+    docs.find({"age":"16"
+    },function(err,docs) {
         if (err) console.log(err);
         else
             res.json(docs[0]);
