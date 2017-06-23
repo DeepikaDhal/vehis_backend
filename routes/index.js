@@ -11,7 +11,7 @@ router.get('/push', function(req, res, next) {
   //res.render('index', { title: 'Express' });
   docs.update({"id":"5e438","name":"deepika"},{$push:{"group":{"name":"user1"}}},function (err,docs) {
       if(err) console.log(err)
-      else res.send('success');
+      else res.send('successful');
 
   })
 
