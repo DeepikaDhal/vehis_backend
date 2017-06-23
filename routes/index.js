@@ -17,6 +17,15 @@ router.get('/push', function(req, res, next) {
 
 });
 
+router.get('/welo', function(req, res, next) {
+    docs.find({},function(err,docs) {
+        if (err) console.log(err);
+        else
+            res.json(docs[0]);
+    })
+
+    });
+
 router.get('/wel', function(req, res, next) {
     res.send('deepi welcome to heroku');
 });
