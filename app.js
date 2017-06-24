@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var cors = require('cors');
-var methodOverride = require('method-override);
+var methodOverride = require('method-override');
 
 var app = express();
 
