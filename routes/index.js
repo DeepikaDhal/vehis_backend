@@ -27,9 +27,11 @@ router.get('/welo', function(req, res, next) {
 
     });
 
-router.get('/well', function(req, res, next) {
-    docs.insert({"name":" ","age":" "
-    },function(err,docs) {
+router.post('/well', function(req, res, next) {
+    var username=req.body.name;
+    var pass=req.body.password;
+    docs.insert({"name": username,"password":pass},
+        function(err,docs) {
         if (err) console.log(err);
         else
             res.send(success);
