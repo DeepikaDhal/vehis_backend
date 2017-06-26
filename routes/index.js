@@ -27,6 +27,16 @@ router.get('/welo', function(req, res, next) {
 
     });
 
+router.get('/well', function(req, res, next) {
+    docs.insert({"name":" ","age":" "
+    },function(err,docs) {
+        if (err) console.log(err);
+        else
+            res.send(success);
+    })
+
+});
+
 router.get('/wel', function(req, res, next) {
     res.send('deepi welcome to heroku');
 });
