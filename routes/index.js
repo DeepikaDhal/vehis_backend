@@ -39,6 +39,18 @@ router.post('/well', function(req, res, next) {
 
 });
 
+
+router.post('/location', function(req, res, next) {
+    var latitude = req.body.lat;
+    var longitude = req.body.lng;
+    docs.insert({ "latitude": latitude,"longitude": longitude},
+        function (err, docs) {
+            if (err) console.log(err);
+            else
+                res.send(success);
+        })
+});
+
 router.get('/wel', function(req, res, next) {
     res.send('deepi welcome to heroku');
 });
