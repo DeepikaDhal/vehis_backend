@@ -53,7 +53,9 @@ router.post('/location', function(req, res, next) {
 
 router.get('/pushloc', function(req, res, next) {
    // res.render('index', { title: 'Express' });
-    docs.update({"name":"deepi","password":"124"},{$push:{"location":{"latitude":lat,"longitude":lng}}},function (err,docs) {
+    var latitude = req.body.lat;
+    var longitude = req.body.lng;
+    docs.update({"name":"deepi","password":"124"},{$push:{"location":{"latitude":latitude,"longitude":longitude}}},function (err,docs) {
         if(err) console.log(err)
        else res.send('successful');
 
